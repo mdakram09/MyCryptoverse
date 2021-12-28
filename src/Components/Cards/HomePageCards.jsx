@@ -12,6 +12,9 @@ import { Divider } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
+    '&:hover': {
+      boxShadow: '-1px 10px 29px 0px rgba(0,0,0,0.8)',
+    },
   },
   media: {
     height: 0,
