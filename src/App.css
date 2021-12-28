@@ -375,3 +375,16 @@ a:hover {
   padding: 20px;
   align-items: center;
 }
+
+.right-hold {
+  margin-left: auto;
+  align-items: center;
+}
+
+.right-hold span {
+  margin-left: 15px;
+}
+
+.right-hold span img {
+  width: 30px;
+}

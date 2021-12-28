@@ -20,9 +20,10 @@ import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import EqualizerOutlinedIcon from '@material-ui/icons/EqualizerOutlined';
 import BusinessOutlinedIcon from '@material-ui/icons/BusinessOutlined';
 import AccountBalanceOutlinedIcon from '@material-ui/icons/AccountBalanceOutlined';
+import { Avatar } from '@material-ui/core';
 
-
-import Icon from "../Images/cryptocurrency.png"
+import Icon from '../Images/cryptocurrency.png';
+import Mario from '../Images/mario-av.png';
 
 const drawerWidth = 240;
 
@@ -58,9 +59,9 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   logo: {
-    height: "50px",
-    width: "50px",
-    marginRight: "1vw"
+    height: '50px',
+    width: '50px',
+    marginRight: '1vw',
   },
 }));
 
@@ -77,11 +78,11 @@ function ResponsiveDrawer(props) {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
-     
+
       <List component="nav" aria-label="main mailbox folders">
         <ListItem button>
           <ListItemIcon>
-          <HomeOutlinedIcon />
+            <HomeOutlinedIcon />
           </ListItemIcon>
           <ListItemText primary="Home" />
         </ListItem>
@@ -104,12 +105,11 @@ function ResponsiveDrawer(props) {
           <ListItemText primary="News" />
         </ListItem>
       </List>
-      
-     
     </div>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <div className={classes.root}>
@@ -125,10 +125,17 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <img className={classes.logo} src={Icon} alt='logo' />
+          <img className={classes.logo} src={Icon} alt="logo" />
           <Typography variant="h6" noWrap>
-            Responsive drawer
+            MyCryptoverse
           </Typography>
+          <Avatar
+            edge="end"
+            className="right-hold flexbox"
+            style={{ marginRight: '1vw' }}
+            src={Mario}
+          />
+          <Typography className="right-hold flexbox">Mario</Typography>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
@@ -164,13 +171,8 @@ function ResponsiveDrawer(props) {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-       
-
 
         <Homepage />
-
-
-
       </main>
     </div>
   );
