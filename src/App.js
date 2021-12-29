@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import ResponsiveDrawer from './Components/Navbar';
 import About from './Components/About';
+import ContactUs from './Components/ContactUs';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </ Route>
           <Route exact path="/about" >
           <About />
+          </ Route>
+          <Route exact path="/contact" >
+          <ContactUs />
           </ Route>
         </Switch>
     </Router>

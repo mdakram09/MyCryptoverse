@@ -13,6 +13,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 import Homepage from './Homepage';
 
@@ -20,6 +21,8 @@ import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import EqualizerOutlinedIcon from '@material-ui/icons/EqualizerOutlined';
 import BusinessOutlinedIcon from '@material-ui/icons/BusinessOutlined';
 import AccountBalanceOutlinedIcon from '@material-ui/icons/AccountBalanceOutlined';
+import InfoIcon from '@material-ui/icons/Info';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
 import { Avatar } from '@material-ui/core';
 
 import Icon from '../Images/cryptocurrency.png';
@@ -63,6 +66,9 @@ const useStyles = makeStyles((theme) => ({
     width: '50px',
     marginRight: '1vw',
   },
+  navLink: {
+    textDecoration: 'none',
+  },
 }));
 
 function ResponsiveDrawer(props) {
@@ -103,6 +109,22 @@ function ResponsiveDrawer(props) {
             <AccountBalanceOutlinedIcon />
           </ListItemIcon>
           <ListItemText primary="News" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <InfoIcon />
+          </ListItemIcon>
+          <Link className={classes.navLink} to="/about">
+            <ListItemText primary="About Us" />
+          </Link>
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <ContactMailIcon />
+          </ListItemIcon>
+          <Link className={classes.navLink} to="/contact">
+            <ListItemText primary="Contact Us" />
+          </Link>
         </ListItem>
       </List>
     </div>

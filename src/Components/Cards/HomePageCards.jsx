@@ -39,7 +39,7 @@ export default function HomePageCards() {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} elevation={7}>
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
