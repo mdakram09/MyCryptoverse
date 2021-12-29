@@ -90,7 +90,9 @@ function Navbar(props) {
           <ListItemIcon>
             <HomeOutlinedIcon />
           </ListItemIcon>
-          <ListItemText primary="Home" />
+          <Link className={classes.navLink} to="/">
+            <ListItemText primary="Home" />
+          </Link>
         </ListItem>
         <ListItem button>
           <ListItemIcon>
