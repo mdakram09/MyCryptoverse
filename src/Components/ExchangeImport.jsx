@@ -15,7 +15,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 
-import Homepage from './Homepage';
+import Exchange from './Exchange';
 
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import EqualizerOutlinedIcon from '@material-ui/icons/EqualizerOutlined';
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Navbar(props) {
+function ExchangeImport(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -208,13 +208,13 @@ function Navbar(props) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
 
-        <Homepage />
+        <Exchange />
       </main>
     </div>
   );
 }
 
-Navbar.propTypes = {
+ExchangeImport.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -222,4 +222,4 @@ Navbar.propTypes = {
   window: PropTypes.func,
 };
 
-export default Navbar;
+export default ExchangeImport;

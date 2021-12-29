@@ -27,6 +27,7 @@ import { Avatar } from '@material-ui/core';
 
 import Icon from '../Images/cryptocurrency.png';
 import Mario from '../Images/mario-av.png';
+import ContactUs from './ContactUs';
 
 const drawerWidth = 240;
 
@@ -71,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Navbar(props) {
+function ContactusImport(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -208,13 +209,13 @@ function Navbar(props) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
 
-        <Homepage />
+        <ContactUs />
       </main>
     </div>
   );
 }
 
-Navbar.propTypes = {
+ContactusImport.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -222,4 +223,4 @@ Navbar.propTypes = {
   window: PropTypes.func,
 };
 
-export default Navbar;
+export default ContactusImport;

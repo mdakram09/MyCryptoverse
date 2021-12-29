@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Navbar(props) {
+function HomepageImport(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -214,7 +214,7 @@ function Navbar(props) {
   );
 }
 
-Navbar.propTypes = {
+HomepageImport.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -222,4 +222,4 @@ Navbar.propTypes = {
   window: PropTypes.func,
 };
 
-export default Navbar;
+export default HomepageImport;
