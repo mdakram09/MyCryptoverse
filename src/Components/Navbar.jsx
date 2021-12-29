@@ -96,19 +96,25 @@ function Navbar(props) {
           <ListItemIcon>
             <EqualizerOutlinedIcon />
           </ListItemIcon>
-          <ListItemText primary="Cryptocurrency" />
+          <Link className={classes.navLink} to="/cryptocurrency">
+            <ListItemText primary="Cryptocurrency" />
+          </Link>
         </ListItem>
         <ListItem button>
           <ListItemIcon>
             <BusinessOutlinedIcon />
           </ListItemIcon>
-          <ListItemText primary="Exchange" />
+          <Link className={classes.navLink} to="/exchange">
+            <ListItemText primary="Exchange" />
+          </Link>
         </ListItem>
         <ListItem button>
           <ListItemIcon>
             <AccountBalanceOutlinedIcon />
           </ListItemIcon>
-          <ListItemText primary="News" />
+          <Link className={classes.navLink} to="/news">
+            <ListItemText primary="News" />
+          </Link>
         </ListItem>
         <ListItem button>
           <ListItemIcon>
