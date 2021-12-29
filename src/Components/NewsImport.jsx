@@ -15,8 +15,6 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 
-import Homepage from './Homepage';
-
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import EqualizerOutlinedIcon from '@material-ui/icons/EqualizerOutlined';
 import BusinessOutlinedIcon from '@material-ui/icons/BusinessOutlined';

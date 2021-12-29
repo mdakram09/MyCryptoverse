@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import News from './Components/News';
 import HomepageImport from './Components/HomepageImport';
 import AboutImport from './Components/AboutImport';
 import ContactusImport from './Components/ContactusImport';
