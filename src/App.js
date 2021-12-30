@@ -6,6 +6,8 @@ import ContactusImport from './Components/ContactusImport';
 import CryptocurrencyImport from './Components/CryptocurrencyImport';
 import ExchangeImport from './Components/ExchangeImport';
 import NewsImport from './Components/NewsImport';
+import { Typography } from '@material-ui/core';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -32,6 +34,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      <Footer />
     </>
   );
 }
