@@ -26,13 +26,13 @@ const About = () => {
       <br />
       <Typography>
         Hi, my self Md Akram Khan. I am a Final Year college student pursuing
-        BTech in Computer Science and Engineering. I have created this website
-        for practicing JavaScript, ReactJs, Material-UI, APIs, API Fetching,
-        Redux, Redux Saga, Hooks etc. You can get all the information about
-        Cryptocurrencies like their prices, exchanges, market values, news
-        related to a particular Cryptocurrency, Graphs with the data of price of
-        the Cryptocurrency as a chart, percentage change in price as a chart and
-        much more.
+        BTech in Computer Science and Engineering. I have created this
+        MyCryptoverse website for practicing JavaScript, ReactJs, Material-UI,
+        APIs, API Fetching, Redux, Redux Saga, Hooks etc. You can get all the
+        information about Cryptocurrencies like their prices, exchanges, market
+        values, news related to a particular Cryptocurrency, Graphs with the
+        data of price of the Cryptocurrency as a chart, percentage change in
+        price as a chart and much more.
       </Typography>
     </div>
   );
