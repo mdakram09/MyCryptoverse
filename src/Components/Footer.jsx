@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -29,7 +29,11 @@ const Footer = () => {
     <div className="footer">
       <Typography className={classes.root}>
         Copyright ©
-        <Link className={classes.link} href="https://mdakram09.netlify.app/">
+        <Link
+          className={classes.link}
+          href="https://mdakram09.netlify.app/"
+          target="blank"
+        >
           {' '}
           Md Akram Khan
         </Link>{' '}
