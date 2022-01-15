@@ -3,6 +3,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import HomePageCards from './Cards/HomePageCards';
+import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,6 +18,11 @@ const useStyles = makeStyles((theme) => ({
 
 const Homepage = () => {
   const classes = useStyles();
+
+  const stats = useSelector((state) => state.globalStats.stats);
+  console.log(stats);
+
+  const { totalCryptocurrencies, totalExchanges, totalMarketCap } = stats[0];
 
   return (
     <div>
@@ -36,17 +42,17 @@ const Homepage = () => {
           <Grid item xs={6} sm={6}>
             <Typography>Total Cryptocurrency</Typography>
             <br />
-            <Typography variant="h6">12,999</Typography>
+            <Typography variant="h6">{totalCryptocurrencies}</Typography>
           </Grid>
           <Grid item xs={6} sm={6}>
             <Typography>Total Exchanges</Typography>
             <br />
-            <Typography variant="h6">569</Typography>
+            <Typography variant="h6">{totalExchanges}</Typography>
           </Grid>
           <Grid item xs={6} sm={6}>
             <Typography>Total Market Cap:</Typography>
             <br />
-            <Typography variant="h6">$2.4 T</Typography>
+            <Typography variant="h6">$ {totalMarketCap} T</Typography>
           </Grid>
           <Grid item xs={6} sm={6}>
             <Typography>Total 24h Volume</Typography>
