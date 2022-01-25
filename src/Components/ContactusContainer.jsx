@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ContactusImport(props) {
+function ContactusContainer(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -213,7 +213,7 @@ function ContactusImport(props) {
   );
 }
 
-ContactusImport.propTypes = {
+ContactusContainer.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -221,4 +221,4 @@ ContactusImport.propTypes = {
   window: PropTypes.func,
 };
 
-export default ContactusImport;
+export default ContactusContainer;

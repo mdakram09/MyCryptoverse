@@ -15,6 +15,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 
+import Exchange from './Exchange';
+
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import EqualizerOutlinedIcon from '@material-ui/icons/EqualizerOutlined';
 import BusinessOutlinedIcon from '@material-ui/icons/BusinessOutlined';
@@ -25,7 +27,6 @@ import { Avatar } from '@material-ui/core';
 
 import Icon from '../Images/cryptocurrency.png';
 import Mario from '../Images/mario-av.png';
-import About from './About';
 
 const drawerWidth = 240;
 
@@ -70,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function AboutImport(props) {
+function ExchangeContainer(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -207,13 +208,13 @@ function AboutImport(props) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
 
-        <About />
+        <Exchange />
       </main>
     </div>
   );
 }
 
-AboutImport.propTypes = {
+ExchangeContainer.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -221,4 +222,4 @@ AboutImport.propTypes = {
   window: PropTypes.func,
 };
 
-export default AboutImport;
+export default ExchangeContainer;

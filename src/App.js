@@ -1,11 +1,11 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import HomepageImport from './Components/HomepageImport';
-import AboutImport from './Components/AboutImport';
-import ContactusImport from './Components/ContactusImport';
-import CryptocurrencyImport from './Components/CryptocurrencyImport';
-import ExchangeImport from './Components/ExchangeImport';
-import NewsImport from './Components/NewsImport';
+import HomepageContainer from './Components/HomepageContainer';
+import AboutContainer from './Components/AboutContainer';
+import ContactusContainer from './Components/ContactusContainer';
+import CryptocurrencyContainer from './Components/CryptocurrencyContainer';
+import ExchangeContainer from './Components/ExchangeContainer';
+import NewsContainer from './Components/NewsContainer';
 import Footer from './Components/Footer';
 
 function App() {
@@ -14,22 +14,22 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <HomepageImport />
+            <HomepageContainer />
           </Route>
           <Route exact path="/cryptocurrency">
-            <CryptocurrencyImport />
+            <CryptocurrencyContainer />
           </Route>
           <Route exact path="/exchange">
-            <ExchangeImport />
+            <ExchangeContainer />
           </Route>
           <Route exact path="/News">
-            <NewsImport />
+            <NewsContainer />
           </Route>
           <Route exact path="/about">
-            <AboutImport />
+            <AboutContainer />
           </Route>
           <Route exact path="/contact">
-            <ContactusImport />
+            <ContactusContainer />
           </Route>
         </Switch>
       </Router>

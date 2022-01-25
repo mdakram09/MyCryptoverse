@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function CryptocurrencyImport(props) {
+function CryptocurrencyContainer(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -213,7 +213,7 @@ function CryptocurrencyImport(props) {
   );
 }
 
-CryptocurrencyImport.propTypes = {
+CryptocurrencyContainer.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -221,4 +221,4 @@ CryptocurrencyImport.propTypes = {
   window: PropTypes.func,
 };
 
-export default CryptocurrencyImport;
+export default CryptocurrencyContainer;
