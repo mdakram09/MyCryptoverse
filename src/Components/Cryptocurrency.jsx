@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import CryptocurrencyPageSearchBar from './CryptocurrencyPageSearchBar';
 import CryptocurrencyCards from './Cards/CryptocurrencyCards';
 import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectedGlobalStats } from '../redux/actions/actions';
@@ -51,7 +52,19 @@ const Cryptocurrency = () => {
       <br />
       <br />
       <div>
-        <CryptocurrencyCards />
+        {/* <Grid item xs={6} sm={3}>
+          {coins?.map((currency) => (
+            <CryptocurrencyCards />
+          ))}
+        </Grid> */}
+
+        <Grid container spacing={3}>
+          {coins?.map((currency) => (
+            <Grid item xs={6} sm={3}>
+              <CryptocurrencyCards />
+            </Grid>
+          ))}
+        </Grid>
       </div>
     </>
   );
