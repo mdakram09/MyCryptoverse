@@ -1,6 +1,6 @@
 import { ActionTypes } from '../constants/actionTypes';
 const intialState = {
-  stats: [
+  myStats: [
     {
       totalCryptocurrencies: 1299,
       totalExchanges: 355,
@@ -15,7 +15,7 @@ export const setGlobalStatsReducer = (
 ) => {
   switch (type) {
     case ActionTypes.FETCH_GLOBAL_STATS_START:
-      return { ...state, products: payload };
+      return { ...state, stats: payload };
     default:
       return state;
   }
