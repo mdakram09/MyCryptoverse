@@ -2,10 +2,12 @@ import { Typography } from '@material-ui/core';
 import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import HomePageCards from './Cards/HomePageCards';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectedGlobalStats } from '../redux/actions/actions';
+
+import CryptocurrencyCards from './Cards/CryptocurrencyCards';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,6 +17,12 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
+  },
+  showMore: {
+    textDecoration: 'none',
+    fontSize: '20px',
+    fontWeight: 'bold',
+    color: '#5a25ed',
   },
 }));
 
@@ -26,6 +34,8 @@ const Homepage = () => {
   const data = useSelector((state) => state.selectedGlobalStats.data);
   const globalStats = data?.stats;
   console.log(globalStats);
+  const coins = data?.coins.slice(0, 10);
+  console.log(coins);
 
   const dispatch = useDispatch();
   const fetchStats = async () => {
@@ -99,11 +109,35 @@ const Homepage = () => {
         <Typography variant="h4" className="home-title">
           Top 10 Cryptos In The World
         </Typography>
-        <Typography className="show-more">Show more</Typography>
+
+        <Link className={classes.showMore} to="/cryptocurrency" variant="body2">
+          Show more
+        </Link>
       </div>
       <br />
 
-      <HomePageCards />
+      <Grid
+        container
+        spacing={3}
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          align: 'center',
+        }}
+      >
+        {coins?.map((currency) => (
+          <Grid item xs={6} sm={4} md={4} lg={4} key={currency.id}>
+            <CryptocurrencyCards
+              key={currency.id}
+              name={currency.name}
+              icon={currency.iconUrl}
+              price={currency.price}
+              marketCap={currency.marketCap}
+              change={currency.change}
+            />
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 };

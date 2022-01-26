@@ -58,10 +58,25 @@ const Cryptocurrency = () => {
           ))}
         </Grid> */}
 
-        <Grid container spacing={3}>
+        <Grid
+          container
+          spacing={3}
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            align: 'center',
+          }}
+        >
           {coins?.map((currency) => (
-            <Grid item xs={6} sm={3}>
-              <CryptocurrencyCards />
+            <Grid item xs={6} sm={4} md={4} lg={4} key={currency.id}>
+              <CryptocurrencyCards
+                key={currency.id}
+                name={currency.name}
+                icon={currency.iconUrl}
+                price={currency.price}
+                marketCap={currency.marketCap}
+                change={currency.change}
+              />
             </Grid>
           ))}
         </Grid>
