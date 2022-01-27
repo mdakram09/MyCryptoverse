@@ -55,7 +55,7 @@ const Homepage = () => {
 
   useEffect(() => {
     fetchStats();
-  }, []);
+  });
 
   // API WORK
 

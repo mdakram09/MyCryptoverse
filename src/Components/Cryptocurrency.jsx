@@ -43,7 +43,7 @@ const Cryptocurrency = () => {
 
   useEffect(() => {
     fetchStats();
-  }, []);
+  });
 
   // API WORK
 
