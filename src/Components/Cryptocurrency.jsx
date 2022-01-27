@@ -31,8 +31,7 @@ const Cryptocurrency = () => {
       .get('https://coinranking1.p.rapidapi.com/coins', {
         headers: {
           'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-          'x-rapidapi-key':
-            '5072e94426msh03f7a8cfae454cep1ecdb9jsn73bce904f298',
+          'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
         },
       })
       .catch((err) => {
