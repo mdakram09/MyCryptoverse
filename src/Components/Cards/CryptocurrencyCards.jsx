@@ -39,6 +39,11 @@ const useStyles = makeStyles((theme) => ({
 export default function CryptocurrencyCards(props) {
   const classes = useStyles();
 
+  const current = new Date();
+  const date = `${current.getDate()}/${
+    current.getMonth() + 1
+  }/${current.getFullYear()}`;
+
   return (
     <Card className={classes.root} elevation={7}>
       <CardHeader
@@ -46,7 +51,7 @@ export default function CryptocurrencyCards(props) {
           <img className={classes.cryptoIcon} src={props.icon} alt="icon" />
         }
         title={props.name}
-        subheader="September 14, 2016"
+        subheader={date}
       />
       <Divider />
       <CardContent>
